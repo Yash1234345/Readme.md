@@ -1,40 +1,45 @@
-Bharat-Intern-Taks
-Task 1
-Problem statement :
-TO PREDICT THE STOCK PRICE OF ANY COMPANY USING LSTM.
-ABOUT DATASET :
-This dataset contains historical data of Google's stock prices and related attributes. It consists of 14 columns and a smaller subset of 1257 rows. Each column represents a specific attribute, and each row contains the corresponding values for that attribute.
+# iOS-CoreML-MNIST
 
-The columns in the dataset are as follows:
+This is the implementation of Number recognition using Keras-MNIST model on Apple's CoreML Framework.
 
-Symbol: The name of the company, which is GOOG in this case.
-Date: The year and date of the stock data.
-Close: The closing price of Google's stock on a particular day.
-High: The highest value reached by Google's stock on the given day.
-Low: The lowest value reached by Google's stock on the given day.
-Open: The opening value of Google's stock on the given day.
-Volume: The trading volume of Google's stock on the given day, i.e., the number of shares traded.
-adjClose: The adjusted closing price of Google's stock, considering factors such as dividends and stock splits.
-adjHigh: The adjusted highest value reached by Google's stock on the given day.
-adjLow: The adjusted lowest value reached by Google's stock on the given day.
-adjOpen: The adjusted opening value of Google's stock on the given day.
-adjVolume: The adjusted trading volume of Google's stock on the given day, accounting for factors such as stock splits.
-divCash: The amount of cash dividend paid out to shareholders on the given day.
-splitFactor: The split factor, if any, applied to Google's stock on the given day. A split factor of 1 indicates no split.
+The app fetches image from your hand writing and perform number recognition in real-time.
 
-Dataset : https://www.kaggle.com/datasets/shreenidhihipparagi/google-stock-prediction
+## Requirements
+
+- Xcode 12.0
+- iOS 14.0
+- For training: Python 3.6 (Keras 2.1.6, TensorFlow 1.5.0, CoreMLTools 2.0b1)
+
+## Usage
+
+To use this app, open **iOS-CoreML-MNIST.xcodeproj** in Xcode 12 and run it on a device with iOS 14. (You can also use simulator)
+
+## Training
+
+If you want to train your own custom model, follow the tutorial given below to create an anaconda environment. Enter the environment and run the following commands in terminal with `./nnet` as master directory.
+
+```
+(coreml) $ python train.py
+(coreml) $ python convert.py
+```
+
+I also included a jupyter notebook for better understanding the above code. You need to use it with root permissions for mainly converting the keras model to CoreML model. Initialise the jupyter notebook instance with the following command:
+
+```
+(coreml) $ jupyter notebook --allow-root
+```
+
+## Tutorial
+
+If you are interested in training your custom MNIST model from scratch, a **step-by-step tutorial** is available at - [**Link**](https://sriraghu.com/2017/07/06/computer-vision-in-ios-coremlkerasmnist/)
+
+## Results
+
+These are the results of the app when tested on iPhone 7. 
+
+<img src="https://github.com/r4ghu/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0016.PNG" alt="Result 1" width="280"> <img src="https://github.com/r4ghu/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0017.PNG" alt="Result 1" width="280"> <img src="https://github.com/r4ghu/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0018.PNG" alt="Result 1" width="280"> <img src="https://github.com/r4ghu/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0019.PNG" alt="Result 1" width="280"> <img src="https://github.com/r4ghu/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0020.PNG" alt="Result 1" width="280"> <img src="https://github.com/r4ghu/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0021.PNG" alt="Result 1" width="280"> <img src="https://github.com/r4ghu/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0022.PNG" alt="Result 1" width="280"> <img src="https://github.com/r4ghu/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0023.PNG" alt="Result 1" width="280"> <img src="https://github.com/r4ghu/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0024.PNG" alt="Result 1" width="280"> <img src="https://github.com/r4ghu/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0025.PNG" alt="Result 1" width="280"> <img src="https://github.com/r4ghu/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0026.PNG" alt="Result 1" width="280">
 
 
-Task 2
-Problem statement :
-Titanic Classification : Algorithm which tells whether the person will be save from sinking or not
-About Dataset :
-Titanic is one of the most infamous shipwrecks in history. On April 15, 1912, during her maiden voyage, the Titanic sank after colliding with an iceberg, killing 1502 out of 2224 passengers and crew. This sensational tragedy shocked the international community and led to better safety regulations for ships.
+## Author
 
-While there was some element of luck involved in surviving, it seems some groups of people were more likely to survive than others.
-
-In this challenge, we have to a predictive model that answers the question: “what sorts of people were more likely to survive?” using passenger data (ie name, age, gender, socio-economic class, etc).
-
-PassengerId: Passenger Identity Survived: Whether passenger survived or not (0 = No, 1 = Yes) Pclass: Class of ticket, a proxy for socio-economic status (SES) (1 = 1st, 2 = 2nd, 3 = 3rd) Name: Name of passenger Sex: Sex of passenger Age: Age of passenger in years SibSp: Number of sibling and/or spouse travelling with passenger Parch: Number of parent and/or children travelling with passenger Ticket: Ticket number Fare: Price of ticket Cabin: Cabin number Embarked: Port of embarkation (C = Cherbourg, Q = Queenstown, S = Southampton)
-
-Dataset : https://www.kaggle.com/datasets/rahulsah06/titanic
+Sri Raghu Malireddi / [@r4ghu](https://sriraghu.com)
